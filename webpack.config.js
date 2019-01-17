@@ -11,7 +11,7 @@ module.exports = {
   entry: path.resolve(__dirname, './dev'),
   output: {
     path: path.resolve(__dirname, './public'),
-    filename: 'bundle.js',
+    filename: 'js/bundle.js',
   },
   module: {
     rules: [
@@ -21,7 +21,11 @@ module.exports = {
         exclude: /node_modules/,
         options: {
           presets: ['react', 'env'],
-        },
+        }
+      },
+      {
+        loader: 'style-loader!css-loader!sass-loader',
+        test: /\.scss/
       }
     ]
   },

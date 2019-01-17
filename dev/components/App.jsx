@@ -1,10 +1,15 @@
 import React, {Component} from 'react';
+require('../scss/styles.scss');
 
 class App extends Component {
 
   render() {
-    <div>
-      REACT APP RENDERING
-    </div>
+    return (
+      <div>
+        REACT APP RENDERING
+      </div>
+    )
   }
 }
+
+export default App;
